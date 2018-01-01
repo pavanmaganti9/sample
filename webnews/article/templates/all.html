@@ -1,0 +1,9 @@
+
+{% for article in all_articles %}
+  <h1>{{ article.heading }}</h1>
+  <h3>{{ article.created }} - {{ article.reporter }}</h3>
+  {% if article.image %}
+  <img width=400px src={{article.image.url}} />
+  {% endif %}
+  <p> {{ article.body }} </p>
+{% endfor %}
